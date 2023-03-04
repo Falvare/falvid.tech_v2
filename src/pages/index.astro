@@ -1,41 +1,57 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import programmer from "../../programmer.svg";
+import programmer from "../../public/programmer.svg";
+import ProjectCard from "../components/ProjectCard";
 ---
 
 <Layout title="Home page">
-  <div  class="h-screen bg-white">
-    <section class="h-screen md:h-5/6" id="about">
-      <div class="text-center text-slate-900">
-        <img src={programmer} class="mx-auto pt-40"  />
-        <h1 class="text-4xl pt-12 font-bold pb-3 xl:text-6xl">
-          Hi, I'm Francisco.
-        </h1>
-        <h1 class="text-2xl px-2 py-3 md:px-16 xl:text-4xl">
-          I'm a software and web developer with a passion for building things.
-        </h1>
-      </div>
-      <h2 class="text-lg text-center py-3 font-bold xl:text-xl">
-        Check out my socials
-      </h2>
-      <div
-        class="flex flex-col text-center py-3 text-violet-900 font-bold lg:flex-row lg:justify-center"
-      >
-        <a href="#" class="py-3 text-2xl lg:px-5">Github</a>
-        <a href="#" class="py-3 text-2xl lg:px-5">Linkedin</a>
-        <a href="#" class="py-3 text-2xl lg:px-5">My blog</a>
-      </div>
-    </section>
-    <div class="h-screen pt-20">
-      <div class="h-4/6 md:h-2/6 bg-violet-900">
-        <h1 class="font-bold text-white text-4xl pt-2 text-center lg:text-5xl">About Me</h1>
-        <p class="text-center px-4 text-white text-2xl py-5 lg:text-4xl xl:px-72">Hi there! I'm Francisco, a software and web developer. Some of my interests include creating martech products and tools that help people be more productive. I enjoy a challenge and I'm always looking for new projects to work on. If you're interested in working with me feel free to reach out!</p>
-      </div>
-      <div class="h-screen">
-        <h1 class="pt-20 text-center text-slate-900 font-bold text-4xl lg:text-5xl">Projects</h1>
-      </div> 
+  <section class="max-w-5xl mx-auto" id="about">
+    <div class="text-center text-slate-900">
+      <img src={programmer} class="mx-auto pt-40" />
+      <h1 class="text-4xl pt-12 font-bold pb-3 xl:text-6xl">
+        Hi, I'm Francisco.
+      </h1>
+      <h1 class="text-2xl px-2 py-3 md:px-16 xl:text-4xl">
+        I'm a software and web developer with a passion for building things.
+      </h1>
     </div>
-
-  </div>
-
+    <h2 class="text-lg text-center py-3 font-bold xl:text-xl">
+      Check out my socials
+    </h2>
+    <div
+      class="flex flex-col text-center py-3 text-violet-900 font-bold md:flex-row md:justify-center"
+    >
+      <a href="#" class="py-3 text-2xl md:px-5">Github</a>
+      <a href="#" class="py-3 text-2xl md:px-5">Linkedin</a>
+      <a href="#" class="py-3 text-2xl md:px-5">My blog</a>
+    </div>
+  </section>
+  <section class="min-h-100 pt-20">
+    <div class="h-4/6 md:h-2/6 bg-violet-900 rounded">
+      <h1 class="font-bold text-white text-4xl pt-2 text-center lg:text-5xl">
+        About Me
+      </h1>
+      <p class="text-center max-w-5xl mx-auto text-white text-2xl py-5">
+        Hi there! I'm Francisco, a software and web developer. Some of my
+        interests include creating martech products and tools that help people
+        be more productive. I enjoy a challenge and I'm always looking for new
+        projects to work on. If you're interested in working with me feel free
+        to reach out!
+      </p>
+    </div>
+  </section>
+  <section class="" id="projects">
+    <div class="">
+      <h1
+        class="py-20 text-center text-slate-900 font-bold text-4xl lg:text-5xl"
+      >
+        Projects
+      </h1>
+      <div class="flex flex-col pb-10 px-3 w-full md:flex-row md:mx-auto md:justify-between md:max-w-5xl">
+        <ProjectCard client:only="react" />
+        <ProjectCard client:only="react" />
+        <ProjectCard client:only="react" />
+      </div>
+    </div>
+  </section>
 </Layout>
