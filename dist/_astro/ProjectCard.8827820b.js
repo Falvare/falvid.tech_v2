@@ -1,0 +1,1 @@
+import"./index.74214594.js";import{j as r}from"./jsx-runtime.dbf3223f.js";function m(){return r.jsx("div",{className:"bg-slate-900 w-full h-72 rounded my-5 md:mx-5 md:w-60",children:"1"})}export{m as default};
